@@ -31,8 +31,11 @@ game.StarterGui:SetCore("SendNotification", {
 if _G.options["Locations"] then
 	for _, v in pairs(workspace.Markers:GetDescendants()) do
 		if v:IsA("BillboardGui") then
+			local b6 = Instance.new("BillboardGui")
+			BillboardGui = b6
+			BillboardGui.Parent = v.Parent
 			v.Enabled = true
-			v.AlwaysOnTop = true
+			BillboardGui.AlwaysOnTop = true
 		end
 	end
 end
@@ -67,8 +70,10 @@ m.KeyDown:connect(function(k)
 			if _G.options["Locations"] then
 	for _, v in pairs(workspace.Markers:GetDescendants()) do
 		if v:IsA("BillboardGui") then
-			v.Enabled = true
-			v.AlwaysOnTop = true
+			local b6 = Instance.new("BillboardGui")
+			BillboardGui = b6
+			BillboardGui.Parent = v.Parent
+			BillboardGui.AlwaysOnTop = true
 		end
 	end
 end
