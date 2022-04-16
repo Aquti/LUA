@@ -23,12 +23,10 @@ end)
 
 
 game.StarterGui:SetCore("SendNotification", {
-	Title = "ESP Loaded!",
-	Text = "Join my discord for more scripts: https://discord.gg/czXkbCS",
+	Title = "Hacks Loaded!",
 	Duration = 5,
 })
 
-print("https://discord.gg/czXkbCS")
 
 if _G.options["Locations"] then
 	for _, v in pairs(workspace.Markers:GetDescendants()) do
@@ -151,6 +149,45 @@ m.KeyDown:connect(function(k)
 					v.BillboardGui:Destroy()
 				end
 			end
+		end	
+			
+		
+		for i,v in pairs(workspace.Tools:GetDescendants()) do 
+			if v.Name == "BillboardGui" then
+				v:Destroy()
+			end
+		end
+		for i,v in pairs(workspace.Threats:GetDescendants()) do 
+			if v.Name == "BillboardGui" then
+				v:Destroy()
+			end
+		end
+	end
+end)
+
+m.KeyDown:connect(function(k)
+	k = k:lower()
+	if k == "x" then
+		-- Chest ESP delete
+		for i,v in pairs(game.Workspace.AIHunter:GetDescendants()) do
+			if v.Name == "BillboardGui" then
+				v:Destroy()
+			end
+		end
+			
+		for _, v in pairs(workspace.Markers:GetDescendants()) do
+		if v:IsA("BillboardGui") then
+			v:Destroy()
+	          
+		end
+				end 
+			
+		for i,v in pairs(workspace:GetChildren()) do 
+			if v.Name:find("Trap") or v.Name:find("Tripwire") then 
+				if v:FindFirstChildWhichIsA("BillboardGui") then 
+					v.BillboardGui:Destroy()
+				end
+			end
 		end
 		for i,v in pairs(workspace.Tools:GetDescendants()) do 
 			if v.Name == "BillboardGui" then
@@ -164,3 +201,5 @@ m.KeyDown:connect(function(k)
 		end
 	end
 end)
+
+
