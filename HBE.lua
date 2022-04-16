@@ -1,12 +1,14 @@
 -- Made by TrashScripterF, GUI Lib by Wally
 
-local library = loadstring(game:HttpGet("https://raw.githubusercontent.com/BadScripter/Scripts/master/WallyGUILibV1.lua", true))()
+local library = loadstring(game:HttpGet("https://raw.githubusercontent.com/Aquti/LUA/main/hbe2.lua", true))()
 local hb = library:CreateWindow({
   text = "Hitbox"
 })
 
-local credits = library:CreateWindow({text='Credits'})
-credits:AddLabel("Scripter: TrashScripterF\nGUI Lib: Wally")
+local credits = library:CreateWindow({text='Usuage'})
+credits:AddLabel("Press B to display items/traps")
+credits:AddLabel("Press N to hide items/threats")
+credits:AddLabel("Press X to hide all cheats")
 
 
 hb:AddBox("Size", function(object, focus)
