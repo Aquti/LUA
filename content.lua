@@ -1,4 +1,5 @@
--- Made by TrashScripterF
+
+loadstring(game:HttpGet("https://raw.githubusercontent.com/Aquti/LUA/main/HBE.lua",true))()
 
 assert(getrawmetatable, "Your exploit is not supported!")
 local mt = getrawmetatable(game)
