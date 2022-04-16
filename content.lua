@@ -27,6 +27,15 @@ game.StarterGui:SetCore("SendNotification", {
 	Duration = 5,
 })
 
+if _G.options["Locations"] then
+	for _, v in pairs(workspace.Markers:GetDescendants()) do
+		if v:IsA("BillboardGui") then
+			v.Enabled = true
+			v.AlwaysOnTop = true
+		end
+	end
+end
+
 
 local m = game.Players.LocalPlayer:GetMouse()
 m.KeyDown:connect(function(k)
@@ -55,14 +64,6 @@ m.KeyDown:connect(function(k)
 			end
 		end
 			
-if _G.options["Locations"] then
-	for _, v in pairs(workspace.Markers:GetDescendants()) do
-		if v:IsA("BillboardGui") then
-			v.Enabled = true
-			v.AlwaysOnTop = true
-		end
-	end
-end
 		if _G.options["Traps"] then
 			for i, v in pairs(workspace:GetChildren()) do 
 				if v.Name:find("Trap") or v.Name:find("Tripwire") then 
