@@ -8,7 +8,7 @@ local hb = library:CreateWindow({
 local credits = library:CreateWindow({text='Usuage'})
 credits:AddLabel("Press B to display items/traps")
 credits:AddLabel("Press N to hide items/threats")
-credits:AddLabel("Press X to hide all cheats")
+
 
 
 hb:AddBox("Size", function(object, focus)
